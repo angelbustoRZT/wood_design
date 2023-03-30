@@ -1,0 +1,48 @@
+// section {
+//     position: relative;
+//     height: 100vh;
+//     overflow: hidden;
+//     .bg {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100vh;
+//         background-position: center;
+//     }
+//     .container_neon {
+//         display: grid;
+//         place-items: center;
+//         width: 100%;
+//         height: 100%;
+//         h1 {
+//             font-family: neon;
+//             //font-family: 'Neonderthaw', cursive;
+//             color: #f9fbc9;
+//             font-size: 7vw;
+//             z-index: 10;
+//             text-shadow: 0 0 10px #e37e1e,
+//                          0 0 20px #e37e1e,
+//                          0 0 40px #e37e1e,
+//                          0 0 80px #e37e1e,
+//                          0 0 120px #e37e1e,
+//                          0 0 160px #e37e1e;
+//             animation: parpadeo 3s linear infinite;
+//         }
+//     }
+// }
+
+// @keyframes parpadeo {
+//     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+//         text-shadow: none,
+//     }
+
+//     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+//         text-shadow: 0 0 10px #e37e1e,
+//                      0 0 20px #e37e1e,
+//                      0 0 40px #e37e1e,
+//                      0 0 80px #e37e1e,
+//                      0 0 120px #e37e1e,
+//                      0 0 160px #e37e1e;
+//     }
+// }

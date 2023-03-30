@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+	--text: #e7e7e0;
+	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+}
+
+body {
+	background: #474e4e;
+//	background: linear-gradient(90deg, rgba(46,44,45,1) 0%, rgba(66,64,67,1) 100%);
+	font-family: raleway_f, sans-serif;
+	line-height: 1.55;
+}
