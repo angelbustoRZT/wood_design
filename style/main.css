@@ -26,6 +26,46 @@ body {
 
 .main-header {
   position: relative; }
+  .main-header .layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative; }
+    .main-header .layers .layer__header {
+      z-index: 101;
+      transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+      transition: var(--transition);
+      will-change: transform;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--text);
+      text-shadow: 0 0 15px #9d822b; }
+      .main-header .layers .layer__header .layers__title {
+        font-size: calc(var(--index) * 2.65);
+        letter-spacing: calc(var(--index) / 2.25); }
+      .main-header .layers .layer__header .layers__caption {
+        font-size: calc(var(--index) / 1.175);
+        letter-spacing: calc(var(--index) / 3.5);
+        margin-top: calc(var(--index) * -.75); }
+    .main-header .layers .layer {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+      z-index: 2;
+      transition: var(--transition); }
+    .main-header .layers .layers__base {
+      transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+      z-index: 0; }
+    .main-header .layers .layers__middle {
+      transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0); }
+    .main-header .layers .layers__front {
+      transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0); }
 
 .main-header::after {
   content: '';
@@ -39,64 +79,6 @@ body {
   background-position: center;
   bottom: calc(var(--index) * -4.5); }
 
-.layers {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  position: relative; }
-
-.layer {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-  z-index: 2;
-  transition: var(--transition); }
-
-.layers__base {
-  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-  z-index: 0; }
-
-.layers__middle {
-  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0); }
-
-.layers__front {
-  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0); }
-
-.layer__header {
-  z-index: 101;
-  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
-  transition: var(--transition);
-  will-change: transform;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: var(--text);
-  text-shadow: 0 0 15px #9d822b; }
-
-.layers__title {
-  font-size: calc(var(--index) * 2.65);
-  letter-spacing: calc(var(--index) / 2.25); }
-
-.layers__caption {
-  font-size: calc(var(--index) / 1.175);
-  letter-spacing: calc(var(--index) / 3.5);
-  margin-top: calc(var(--index) * -.75); }
-
-.container_products {
-  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
-  min-height: 100vh;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center; }
-
 .content {
   will-change: transform; }
 
@@ -107,18 +89,10 @@ body {
   font-size: calc(var(--index) * .75);
   letter-spacing: calc(var(--index) / 37.5); }
 
-.abajo {
-  background: white;
-  padding: 15px 20px; }
-  .abajo .logo {
-    color: black; }
-  .abajo nav ul li a {
-    color: black; }
-
 .container_fog {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   z-index: 99; }
   .container_fog .img_fog {
@@ -186,48 +160,122 @@ body {
   background: linear-gradient(to top, #353228, #3d422f);
   filter: blur(5px); }
 
-.container_cards {
-  position: relative;
+.container_products {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 10%;
+  z-index: 100; }
+
+.products_content {
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 40px 0;
-  z-index: 100; }
-  .container_cards .card {
+  position: relative;
+  text-align: center; }
+  .products_content .container_cards {
     position: relative;
-    min-width: 320px;
-    height: 440px;
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    margin: 30px; }
-    .container_cards .card .box {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      background: #474e4e;
-      border: 2px solid #474e4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px; }
+    .products_content .container_cards .card {
+      position: relative;
+      min-width: 320px;
+      height: 440px;
+      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
       border-radius: 15px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-      transition: .5s; }
-    .container_cards .card .box:hover {
-      transform: translateY(-50px);
-      box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5); }
-    .container_cards .card .cocina_1 {
-      background-image: url(../imagenes/cocina_1.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .container_cards .card .cocina_2 {
-      background-image: url(../imagenes/cocina_2.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .container_cards .card .cocina_3 {
-      background-image: url(../imagenes/cocina_3.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
+      margin: 30px; }
+      .products_content .container_cards .card .box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background: #474e4e;
+        border: 2px solid #474e4e;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        transition: .5s; }
+      .products_content .container_cards .card .box:hover {
+        transform: translateY(-50px);
+        box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5); }
+      .products_content .container_cards .card .cocina_1 {
+        background-image: url(../imagenes/cocina_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .cocina_2 {
+        background-image: url(../imagenes/cocina_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .cocina_3 {
+        background-image: url(../imagenes/cocina_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .cocina_4 {
+        background-image: url(../imagenes/cocina_4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .cocina_5 {
+        background-image: url(../imagenes/cocina_5.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .cocina_6 {
+        background-image: url(../imagenes/cocina_6.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .banio_1 {
+        background-image: url(../imagenes/banio_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .banio_2 {
+        background-image: url(../imagenes/banio_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .banio_3 {
+        background-image: url(../imagenes/banio_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+
+.products_title {
+  font-size: 7vh;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #aaa49d;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 760px) {
+  .products_content .container_cards .card {
+    min-width: 220px;
+    height: 340px; } }
+
+@media (max-width: 560px) {
+  .products_content .container_cards .card {
+    min-width: 160px;
+    height: 260px; } }
+
+@media (max-width: 440px) {
+  .products_content .container_cards .card {
+    min-width: 140px;
+    height: 240px; } }
+
+@media (max-width: 400px) {
+  .products_content .container_cards .card {
+    min-width: 110px;
+    height: 200px; } }
+
+footer {
+  height: 50px;
+  background: white; }

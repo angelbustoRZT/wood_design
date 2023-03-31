@@ -1,55 +1,165 @@
-.container_cards {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 40px 0;
+
+.container_products {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 10%;
     z-index: 100;
-    .card {
+}
+.products_content {
+	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-align: center;
+    .container_cards {
         position: relative;
-        min-width: 320px;
-        height: 440px;
-        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .2),
-                    inset -5px -5px 15px rgba(255, 255, 255, .1),
-                    5px 5px 15px rgba(0, 0, 0, .3),
-                    -5px -5px 15px rgba(255, 255, 255, .1);
-        border-radius: 15px;
-        margin: 30px;
-        .box {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            background: #474e4e;
-            border: 2px solid #474e4e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        .card {
+            position: relative;
+            min-width: 320px;
+            height: 440px;
+            box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .2),
+                        inset -5px -5px 15px rgba(255, 255, 255, .1),
+                        5px 5px 15px rgba(0, 0, 0, .3),
+                        -5px -5px 15px rgba(255, 255, 255, .1);
             border-radius: 15px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
-            transition: .5s;
-        }
-        .box:hover {
-            transform: translateY(-50px);
-            box-shadow: 0 40px 70px rgba(0, 0, 0, .5);
-        }
-        .cocina_1 {
-            background-image: url(../imagenes/cocina_1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .cocina_2 {
-            background-image: url(../imagenes/cocina_2.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .cocina_3 {
-            background-image: url(../imagenes/cocina_3.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            margin: 30px;
+            .box {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                background: #474e4e;
+                border: 2px solid #474e4e;
+                border-radius: 15px;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+                transition: .5s;
+            }
+            .box:hover {
+                transform: translateY(-50px);
+                box-shadow: 0 40px 70px rgba(0, 0, 0, .5);
+            }
+            .cocina_1 {
+                background-image: url(../imagenes/cocina_1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .cocina_2 {
+                background-image: url(../imagenes/cocina_2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .cocina_3 {
+                background-image: url(../imagenes/cocina_3.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .cocina_4 {
+                background-image: url(../imagenes/cocina_4.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .cocina_5 {
+                background-image: url(../imagenes/cocina_5.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .cocina_6 {
+                background-image: url(../imagenes/cocina_6.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .banio_1 {
+                background-image: url(../imagenes/banio_1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .banio_2 {
+                background-image: url(../imagenes/banio_2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .banio_3 {
+                background-image: url(../imagenes/banio_3.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
     }
+}
+
+.products_title {
+    font-size: 7vh;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #aaa49d;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, .3),
+                -5px -5px 15px rgba(255, 255, 255, .1);
+}
+
+@media (max-width:760px) {
+    .products_content {
+        .container_cards {
+            .card {
+                min-width: 220px;
+                height: 340px;
+            }
+        }
+    }
+}
+
+@media (max-width:560px) {
+    .products_content {
+        .container_cards {
+            .card {
+                min-width: 160px;
+                height: 260px;
+            }
+        }
+    }
+}
+
+@media (max-width:440px) {
+    .products_content {
+        .container_cards {
+            .card {
+                min-width: 140px;
+                height: 240px;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .products_content {
+        .container_cards {
+            .card {
+                min-width: 110px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+
+footer {
+    height: 50px;
+    background: white;
 }
