@@ -13,14 +13,14 @@
     .img_fog_1 {
         background: url("../imagenes/fog-1.png");
         background-repeat: repeat-x;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         animation: marquee 60s linear infinite;
     }
     .img_fog_2 {
         background: url("../imgagenes/fog-2.png");
         background-repeat: repeat-x;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         animation: marquee 30s linear infinite;
     }
