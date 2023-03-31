@@ -107,7 +107,7 @@ body {
     background-position: center;
     animation: marquee 60s linear infinite; }
   .container_fog .img_fog_2 {
-    background: url("../imgagenes/fog-2.png");
+    background: url("../imagenes/fog-2.png");
     background-repeat: repeat-x;
     background-size: cover;
     background-position: center;
