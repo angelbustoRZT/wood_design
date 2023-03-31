@@ -42,9 +42,12 @@
                 box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
                 border-radius: 15px;
                 transition: .5s;
+                opacity: .75;
             }
             .box:hover {
-                transform: translateY(-50px);
+                //transform: translateY(-50px);
+                scale: 1.05;
+                opacity: 1;
                 box-shadow: 0 40px 70px rgba(0, 0, 0, .5);
             }
             .cocina_1 {
@@ -131,6 +134,12 @@
             .card {
                 min-width: 160px;
                 height: 260px;
+                .box {
+                    top: 10px;
+                    left: 10px;
+                    right: 10px;
+                    bottom: 10px;
+                }
             }
         }
     }

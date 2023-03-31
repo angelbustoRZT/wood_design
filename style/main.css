@@ -199,9 +199,11 @@ body {
         border: 2px solid #474e4e;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         border-radius: 15px;
-        transition: .5s; }
+        transition: .5s;
+        opacity: .75; }
       .products_content .container_cards .card .box:hover {
-        transform: translateY(-50px);
+        scale: 1.05;
+        opacity: 1;
         box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5); }
       .products_content .container_cards .card .cocina_1 {
         background-image: url(../imagenes/cocina_1.jpg);
@@ -264,7 +266,12 @@ body {
 @media (max-width: 560px) {
   .products_content .container_cards .card {
     min-width: 160px;
-    height: 260px; } }
+    height: 260px; }
+    .products_content .container_cards .card .box {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px; } }
 
 @media (max-width: 440px) {
   .products_content .container_cards .card {
@@ -321,11 +328,11 @@ footer {
       display: inline-block;
       padding: 0 15px; }
       footer ul li a {
-        color: inherit;
-        text-decoration: none;
-        opacity: .8; }
+        color: #aaa49d;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+        text-decoration: none; }
       footer ul li a:hover {
-        opacity: 1; }
+        color: black; }
   footer .copyright {
     margin-top: 15px;
     text-align: center;
