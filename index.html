@@ -15,17 +15,20 @@
     <div id="progress_bar"></div>
     <div id="scroll_path"></div>
     <!--HEADER-->
-    <!-- <header class="nav">
-        <a href="#" class="logo">Wood Design</a>
-        <nav>
-            <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">inicio</a></li>
+    <header class="header_nav">
+        <img class="logo" src="./imagenes/logo.jpeg" alt="">
+        <button id="abrir" class="menu_abrir"><i class="fa-solid fa-bars"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="menu_cerrar"><i class="fa-light fa-x"></i></button>
+            <ul class="nav_list"> 
+                <li><a class="desplazar" href="#inicio">Inicio</a></li>
+                <li><a class="desplazar" href="#porque">Quienes somos</a></li>
+                <li><a class="desplazar" href="#productos">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Que hacemos</a></li>
             </ul>
         </nav>
-    </header> -->
+    </header>
     <!--MAIN-->
     <div class="wrapper">
 	    <div class="content">
@@ -35,7 +38,7 @@
                 <div class="img_fog img_fog_2"></div>
             </div>
             <!--PORTADA-->
-            <header class="main-header">
+            <header id="inicio" class="main-header">
 			    <div class="layers">
 					<div class="layer__header">
 						<div class="layers__caption"></div>
@@ -46,8 +49,34 @@
 					<div class="layer layers__front" style="background-image: url(imagenes/layer-front.png);"></div>
 				</div>
 			</header>
+            <!--PORQUE-->
+            <section id="porque" class="porque">
+                <h1>¿Por qué tener muebles a la medida?</h1>
+                <div class="container_porque">
+                    <div class="aprovecha">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <p>Aprovecha los espacios<br>
+                            <span>Con nuestros muebles a la medida podrás disponer de todos los espacios de tu casa.</span></p>
+                    </div>
+                    <div class="asesorias">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <p>Asesorias de principio a fin<br>
+                            <span>Nos caracterizamos por tener un excelente servicio y una muy buena experiencia.</span></p>
+                    </div>
+                    <div class="eliges">
+                        <i class="fa-solid fa-face-smile-wink"></i>
+                        <p>Eliges todo para tus muebles<br>
+                            <span>No te limites al hacer la eleccion de lo que quieres.</span></p>
+                    </div>
+                    <div class="estilo">
+                        <i class="fa-solid fa-pencil"></i>
+                        <p>Muebles a tu estilo<br>
+                            <span>Si tienes un mueble a la medida y personalizado pondras la huella y tu estilo a tu hogar.</span></p>
+                    </div>
+                </div>
+            </section>
             <!--CONTAINER PRODUCTS-->
-		    <article class="container_products">
+		    <article id="productos" class="container_products">
                 <!--COCINAS-->
                 <h1 class="products_title">COCINAS</h1>
 			    <div class="products_content">
@@ -114,7 +143,7 @@
                     </li>
                 </ul>
                 <p class="copyright">
-                    RZT @ 2023
+                    RZT © 2023
                 </p>
             </footer>
 		</div>
@@ -123,6 +152,8 @@
     <script src="libs/gsap/gsap.min.js"></script>
 	<script src="libs/gsap/ScrollTrigger.min.js"></script>
 	<script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <!--LINK TO JQUERY-->
+    <script src="js/jquery-3.6.4.min.js"></script>
     <!--LINK TO JS-->
     <script src="js/main.js"></script>
 </body>
