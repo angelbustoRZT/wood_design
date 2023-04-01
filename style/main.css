@@ -99,7 +99,8 @@ body {
   z-index: 101; }
   .header_nav .logo {
     max-width: 5rem;
-    border-radius: 50%; }
+    border-radius: 50%;
+    visibility: hidden; }
   .header_nav .nav {
     display: flex;
     flex-direction: column;
