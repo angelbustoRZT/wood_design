@@ -96,7 +96,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  z-index: 101; }
+  z-index: 101;
+  transition: height 10s cubic-bezier(0.23, 1, 0.32, 1); }
   .header_nav .logo {
     max-width: 5rem;
     border-radius: 50%;
@@ -114,7 +115,8 @@ body {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
     padding: 2rem;
     opacity: 0;
-    visibility: hidden; }
+    visibility: hidden;
+    transition: height 1s cubic-bezier(0.23, 1, 0.32, 1); }
     .header_nav .nav .nav_list {
       list-style-type: none;
       display: flex;
@@ -217,7 +219,7 @@ body {
   display: grid;
   place-items: center;
   width: 100%;
-  margin-top: 10%; }
+  margin-top: 3rem; }
 
 .products_content {
   --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
@@ -304,9 +306,31 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center; }
+      .products_content .container_cards .card .ropero_1 {
+        background-image: url(../imagenes/ropero_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .ropero_2 {
+        background-image: url(../imagenes/ropero_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .products_content .container_cards .card .tv_1 {
+        background-image: url(../imagenes/tv_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
 
 .products_title {
-  font-size: 5vh;
+  font-size: calc(var(--index) * 1.4);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 15px #9d822b; }
+
+.products_title2 {
+  font-size: calc(var(--index) * 1.65);
   text-transform: uppercase;
   font-weight: 900;
   color: #aaa49d;
@@ -361,15 +385,9 @@ footer {
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
       animation: 1s; }
     footer .social a:hover {
-      scale: 1.2; }
-      footer .social a:hover .fa-instagram {
-        color: #cf2eb4; }
-      footer .social a:hover .fa-facebook-f {
-        color: #1e4297; }
-      footer .social a:hover .fa-twitter {
-        color: #52a8e7; }
-      footer .social a:hover .fa-whatsapp {
-        color: #1e9910; }
+      scale: 1.2;
+      color: white;
+      text-shadow: 0 0 15px #9d822b; }
   footer ul {
     margin-top: 0;
     padding: 0;
@@ -406,7 +424,9 @@ footer {
     font-weight: 900;
     color: #aaa49d;
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-    padding-bottom: 3rem; }
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
   .porque .container_porque {
     --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
     color: white;
@@ -473,25 +493,122 @@ footer {
       font-size: 1.5vh; } }
 
 @media (max-width: 720px) {
-  .porque .container_porque .aprovecha,
-  .porque .container_porque .asesorias,
-  .porque .container_porque .eliges,
-  .porque .container_porque .estilo {
+  .porque {
+    margin-top: 15%; }
+    .porque .container_porque .aprovecha,
+    .porque .container_porque .asesorias,
+    .porque .container_porque .eliges,
+    .porque .container_porque .estilo {
+      width: 40vh; }
+      .porque .container_porque .aprovecha i,
+      .porque .container_porque .asesorias i,
+      .porque .container_porque .eliges i,
+      .porque .container_porque .estilo i {
+        padding: 1rem; } }
+
+@media (max-width: 570px) {
+  .porque {
+    margin-top: 20%; }
+    .porque .container_porque .aprovecha,
+    .porque .container_porque .asesorias,
+    .porque .container_porque .eliges,
+    .porque .container_porque .estilo {
+      width: 30vh; }
+      .porque .container_porque .aprovecha i,
+      .porque .container_porque .asesorias i,
+      .porque .container_porque .eliges i,
+      .porque .container_porque .estilo i {
+        padding: 1rem; } }
+
+.proceso {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center; }
+  .proceso h1 {
+    font-size: calc(var(--index) * 1.65);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #aaa49d;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .proceso .container_proceso {
+    --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem; }
+    .proceso .container_proceso .visita,
+    .proceso .container_proceso .disenio,
+    .proceso .container_proceso .entrega {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: start;
+      width: 70vh;
+      height: 15vh;
+      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+      border-radius: 15px; }
+      .proceso .container_proceso .visita i,
+      .proceso .container_proceso .disenio i,
+      .proceso .container_proceso .entrega i {
+        font-size: 4vh;
+        padding: 3rem;
+        color: white;
+        text-shadow: 0 0 15px #9d822b; }
+      .proceso .container_proceso .visita p,
+      .proceso .container_proceso .disenio p,
+      .proceso .container_proceso .entrega p {
+        font-size: 2vh;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 0 15px #9d822b;
+        padding-right: 3vh; }
+        .proceso .container_proceso .visita p span,
+        .proceso .container_proceso .disenio p span,
+        .proceso .container_proceso .entrega p span {
+          color: #aaa49d;
+          text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 950px) {
+  .proceso .container_proceso .visita,
+  .proceso .container_proceso .disenio,
+  .proceso .container_proceso .entrega {
+    width: 60vh; } }
+
+@media (max-width: 850px) {
+  .proceso .container_proceso .visita,
+  .proceso .container_proceso .disenio,
+  .proceso .container_proceso .entrega {
+    width: 50vh; }
+    .proceso .container_proceso .visita p,
+    .proceso .container_proceso .disenio p,
+    .proceso .container_proceso .entrega p {
+      font-size: 1.5vh; } }
+
+@media (max-width: 720px) {
+  .proceso .container_proceso .visita,
+  .proceso .container_proceso .disenio,
+  .proceso .container_proceso .entrega {
     width: 40vh; }
-    .porque .container_porque .aprovecha i,
-    .porque .container_porque .asesorias i,
-    .porque .container_porque .eliges i,
-    .porque .container_porque .estilo i {
+    .proceso .container_proceso .visita i,
+    .proceso .container_proceso .disenio i,
+    .proceso .container_proceso .entrega i {
       padding: 1rem; } }
 
 @media (max-width: 570px) {
-  .porque .container_porque .aprovecha,
-  .porque .container_porque .asesorias,
-  .porque .container_porque .eliges,
-  .porque .container_porque .estilo {
+  .proceso .container_proceso .visita,
+  .proceso .container_proceso .disenio,
+  .proceso .container_proceso .entrega {
     width: 30vh; }
-    .porque .container_porque .aprovecha i,
-    .porque .container_porque .asesorias i,
-    .porque .container_porque .eliges i,
-    .porque .container_porque .estilo i {
+    .proceso .container_proceso .visita i,
+    .proceso .container_proceso .disenio i,
+    .proceso .container_proceso .entrega i {
       padding: 1rem; } }

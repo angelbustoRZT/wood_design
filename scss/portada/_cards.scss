@@ -3,7 +3,7 @@
     display: grid;
     place-items: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 3rem;
 }
 .products_content {
 	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
@@ -105,12 +105,38 @@
                 background-repeat: no-repeat;
                 background-position: center;
             }
+            .ropero_1 {
+                background-image: url(../imagenes/ropero_1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .ropero_2 {
+                background-image: url(../imagenes/ropero_2.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .tv_1 {
+                background-image: url(../imagenes/tv_1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
     }
 }
 
 .products_title {
-    font-size: 5vh;
+    font-size: calc(var(--index) * 1.4);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 15px #9d822b;
+}
+
+.products_title2 {
+    font-size: calc(var(--index) * 1.65);
     text-transform: uppercase;
     font-weight: 900;
     color: #aaa49d;

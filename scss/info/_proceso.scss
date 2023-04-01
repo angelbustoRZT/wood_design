@@ -1,0 +1,119 @@
+.proceso {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    h1 {
+        font-size: calc(var(--index) * 1.65);
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #aaa49d;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, .3),
+                    -5px -5px 15px rgba(255, 255, 255, .1);
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .container_proceso {
+        --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .visita,
+        .disenio,
+        .entrega {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: start;
+            width: 70vh;
+            height: 15vh;
+            box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .2),
+            inset -5px -5px 15px rgba(255, 255, 255, .1),
+            5px 5px 15px rgba(0, 0, 0, .3),
+            -5px -5px 15px rgba(255, 255, 255, .1);
+            border-radius: 15px;
+            i {
+                font-size: 4vh;
+                padding: 3rem;
+                color: white;
+                text-shadow: 0 0 15px #9d822b;
+            }
+            p {
+                font-size: 2vh;
+                font-weight: 600;
+                color: white;
+                text-shadow: 0 0 15px #9d822b;
+                padding-right: 3vh;
+                span {
+                    color: #aaa49d;
+                    text-shadow: 5px 5px 15px rgba(0, 0, 0, .3),
+                                -5px -5px 15px rgba(255, 255, 255, .1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .proceso {
+        .container_proceso{
+            .visita,
+            .disenio,
+            .entrega  {
+                width: 60vh;
+            }
+        }
+    }
+}
+
+@media (max-width:850px) {
+    .proceso {
+        .container_proceso{
+            .visita,
+            .disenio,
+            .entrega  {
+                width: 50vh;
+                p {
+                    font-size: 1.5vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .proceso {
+        .container_proceso{
+            .visita,
+            .disenio,
+            .entrega  {
+                width: 40vh;
+                i {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:570px) {
+    .proceso {
+        .container_proceso{
+            .visita,
+            .disenio,
+            .entrega  {
+                width: 30vh;
+                i {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
