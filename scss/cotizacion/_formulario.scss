@@ -1,0 +1,97 @@
+.container_cotizacion {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin: 3rem auto;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .2),
+                inset -5px -5px 15px rgba(255, 255, 255, .1),
+                5px 5px 15px rgba(0, 0, 0, .3),
+                -5px -5px 15px rgba(255, 255, 255, .1);
+    border-radius: 15px;
+    max-width: 1200px;
+    h1 {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: calc(var(--index) * 1.4);
+        text-transform: uppercase;
+        font-weight: 900;
+        color: white;
+        text-shadow: 0 0 15px #9d822b;
+    }
+    .cotizacion_form {
+        max-width: 600px;
+        margin: auto;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    .cotizacion_form_text,
+    .cotizacion_form_text2 {
+        display: block;
+        width: 50%;
+        margin: 16px 0;
+        border: 0;
+        background: black;
+        padding: 20px 40px;
+        outline: none;
+        transition: .5s;
+        text-transform: uppercase;
+        font-weight: 900;
+        background: #474e4e;
+        border: 2px solid #474e4e;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    }
+    .cotizacion_form_text2 {
+            resize: none;
+            height: 120px;
+    }
+    .cotizacion_form_text:focus {
+        box-shadow: 0 0 10px 4px #34495e;
+    }
+    .cotizacion_form_btn {
+        float: right;
+        border: 0;
+        background: #474e4e;
+        border: 2px solid #474e4e;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+        color: white;
+        padding: 12px 50px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: .5s;
+        margin-bottom: 3rem;
+    }
+    .cotizacion_form_btn:hover {
+        text-shadow: 0 0 15px #9d822b;
+        scale: 1.1;
+    }
+}
+
+@media (max-width:1400px) {
+    .container_cotizacion {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container_cotizacion {
+        max-width: 800px;
+    }
+}
+
+@media (max-width:1000px) {
+    .container_cotizacion {
+        max-width: 600px;
+    }
+}
+
+@media (max-width:800px) {
+    .container_cotizacion {
+        max-width: 400px;
+    }
+}
+
+@media (max-width:600px) {
+    .container_cotizacion {
+        max-width: 200px;
+    }
+}
