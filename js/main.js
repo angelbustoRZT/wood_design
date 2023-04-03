@@ -40,3 +40,9 @@ $(document).ready(function(){
 		}, 150);
 	})
 })
+
+//LOADER
+window.onload = function(){
+	$('#onload').fadeOut();
+	$('body').removeClass('hidden');
+}

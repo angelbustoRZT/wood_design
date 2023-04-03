@@ -15,6 +15,122 @@ body {
   font-family: raleway_f, sans-serif;
   line-height: 1.55; }
 
+.centrado {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 199;
+  background: #474e4e; }
+
+.hidden {
+  overflow: hidden; }
+
+.cssload-loader {
+  width: 146px;
+  height: 146px;
+  line-height: 146px;
+  margin: 49px auto;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 200;
+  text-transform: uppercase;
+  -o-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase; }
+
+.cssload-loader:before,
+.cssload-loader:after {
+  opacity: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  content: "\0020";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 97px;
+  border: 5px solid #9d822b;
+  box-shadow: 0 0 49px white, inset 0 0 49px white;
+  -o-box-shadow: 0 0 49px white, inset 0 0 49px white;
+  -ms-box-shadow: 0 0 49px white, inset 0 0 49px white;
+  -webkit-box-shadow: 0 0 49px white, inset 0 0 49px white;
+  -moz-box-shadow: 0 0 49px white, inset 0 0 49px white; }
+
+.cssload-loader:after {
+  z-index: 200;
+  animation: cssload-gogoloader 2.3s infinite 1.15s;
+  -o-animation: cssload-gogoloader 2.3s infinite 1.15s;
+  -ms-animation: cssload-gogoloader 2.3s infinite 1.15s;
+  -webkit-animation: cssload-gogoloader 2.3s infinite 1.15s;
+  -moz-animation: cssload-gogoloader 2.3s infinite 1.15s; }
+
+.cssload-loader:before {
+  z-index: 200;
+  animation: cssload-gogoloader 2.3s infinite;
+  -o-animation: cssload-gogoloader 2.3s infinite;
+  -ms-animation: cssload-gogoloader 2.3s infinite;
+  -webkit-animation: cssload-gogoloader 2.3s infinite;
+  -moz-animation: cssload-gogoloader 2.3s infinite; }
+
+@keyframes cssload-gogoloader {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+
+@-o-keyframes cssload-gogoloader {
+  0% {
+    -o-transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -o-transform: scale(1);
+    opacity: 0; } }
+
+@-ms-keyframes cssload-gogoloader {
+  0% {
+    -ms-transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -ms-transform: scale(1);
+    opacity: 0; } }
+
+@-webkit-keyframes cssload-gogoloader {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+@-moz-keyframes cssload-gogoloader {
+  0% {
+    -moz-transform: scale(0);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 0; } }
+
 @font-face {
   font-family: raleway_f;
   src: url(../fuentes/raleway-regular.woff2); }
