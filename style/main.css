@@ -1055,5 +1055,6 @@ footer {
 
 @media (max-width: 400px) {
   .nosotros .container_nosotros .text_nosotros {
-    width: 300px;
-    height: 400px; } }
+    width: 300px; }
+    .nosotros .container_nosotros .text_nosotros p {
+      font-size: 8px; } }
