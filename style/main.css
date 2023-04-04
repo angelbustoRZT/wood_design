@@ -1071,7 +1071,7 @@ footer {
 
 @media (min-height: 600px) {
   .nosotros .container_nosotros .text_nosotros {
-    height: 400px; } }
+    height: 300px; } }
 
 @media (min-height: 720px) {
   .nosotros .container_nosotros .text_nosotros {
