@@ -1056,3 +1056,15 @@ footer {
 @media (max-width: 400px) {
   .nosotros .container_nosotros .text_nosotros {
     width: 300px; } }
+
+@media (min-height: 600px) {
+  .nosotros .container_nosotros .text_nosotros {
+    height: 400px; } }
+
+@media (min-height: 720px) {
+  .nosotros .container_nosotros .text_nosotros {
+    height: 500px; } }
+
+@media (min-height: 800px) {
+  .nosotros .container_nosotros .text_nosotros {
+    height: 600px; } }
