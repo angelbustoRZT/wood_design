@@ -70,6 +70,7 @@
 
 @media (max-width:680px) {
     .nosotros {
+        margin-top: 15%;
         .container_nosotros{
             .text_nosotros {
                 width: 80vh;
@@ -83,6 +84,7 @@
 
 @media (max-width:550px) {
     .nosotros {
+        margin-top: 20%;
         .container_nosotros{
             .text_nosotros {
                 width: 400px;
@@ -99,7 +101,7 @@
         .container_nosotros{
             .text_nosotros {
                 width: 300px;
-                height: 65vh;
+                height: 400px;
             }
         }
     }

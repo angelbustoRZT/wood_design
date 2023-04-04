@@ -752,7 +752,7 @@ footer {
   .container_cotizacion .cotizacion_form_text,
   .container_cotizacion .cotizacion_form_text2 {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 16px 0;
     border: 0;
     background: black;
@@ -804,6 +804,14 @@ footer {
 @media (max-width: 600px) {
   .container_cotizacion {
     max-width: 500px; } }
+
+@media (max-width: 500px) {
+  .container_cotizacion {
+    max-width: 400px; } }
+
+@media (max-width: 400px) {
+  .container_cotizacion {
+    max-width: 300px; } }
 
 .container_info_tienda {
   display: grid;
@@ -1030,18 +1038,22 @@ footer {
     width: 100vh; } }
 
 @media (max-width: 680px) {
-  .nosotros .container_nosotros .text_nosotros {
-    width: 80vh; }
-    .nosotros .container_nosotros .text_nosotros p {
-      font-size: 1.5vh; } }
+  .nosotros {
+    margin-top: 15%; }
+    .nosotros .container_nosotros .text_nosotros {
+      width: 80vh; }
+      .nosotros .container_nosotros .text_nosotros p {
+        font-size: 1.5vh; } }
 
 @media (max-width: 550px) {
-  .nosotros .container_nosotros .text_nosotros {
-    width: 400px; }
-    .nosotros .container_nosotros .text_nosotros i {
-      padding: 1rem; } }
+  .nosotros {
+    margin-top: 20%; }
+    .nosotros .container_nosotros .text_nosotros {
+      width: 400px; }
+      .nosotros .container_nosotros .text_nosotros i {
+        padding: 1rem; } }
 
 @media (max-width: 400px) {
   .nosotros .container_nosotros .text_nosotros {
     width: 300px;
-    height: 65vh; } }
+    height: 400px; } }

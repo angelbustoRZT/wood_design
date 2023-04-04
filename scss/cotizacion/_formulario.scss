@@ -33,7 +33,7 @@
     .cotizacion_form_text,
     .cotizacion_form_text2 {
         display: block;
-        width: 50%;
+        width: 80%;
         margin: 16px 0;
         border: 0;
         background: black;
@@ -99,5 +99,17 @@
 @media (max-width:600px) {
     .container_cotizacion {
         max-width: 500px;
+    }
+}
+
+@media (max-width:500px) {
+    .container_cotizacion {
+        max-width: 400px;
+    }
+}
+
+@media (max-width:400px) {
+    .container_cotizacion {
+        max-width: 300px;
     }
 }
