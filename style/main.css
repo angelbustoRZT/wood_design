@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 0; }
+  outline: 0;
+  user-select: none; }
 
 :root {
   --index: calc(1vw + 1vh);
