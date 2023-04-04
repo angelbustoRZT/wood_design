@@ -186,7 +186,7 @@ body {
 .main-header::after {
   content: '';
   position: absolute;
-  z-index: 100;
+  z-index: 105;
   width: 100%;
   height: calc(var(--index) * 10);
   background-image: url(../imagenes/ground.png);
@@ -532,7 +532,7 @@ footer {
   display: grid;
   place-items: center;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 3rem;
   text-align: center; }
   .porque h1 {
     font-size: calc(var(--index) * 1.65);
@@ -745,6 +745,10 @@ footer {
     font-weight: 900;
     color: white;
     text-shadow: 0 0 15px #9d822b; }
+  .container_cotizacion h2 {
+    color: #aaa49d;
+    font-size: calc(var(--index) * .8);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }
   .container_cotizacion .cotizacion_form {
     max-width: 600px;
     margin: auto;
@@ -788,7 +792,7 @@ footer {
 
 @media (max-width: 1400px) {
   .container_cotizacion {
-    max-width: 1000px; } }
+    max-width: 900px; } }
 
 @media (max-width: 1200px) {
   .container_cotizacion {
@@ -796,12 +800,232 @@ footer {
 
 @media (max-width: 1000px) {
   .container_cotizacion {
-    max-width: 600px; } }
+    max-width: 700px; } }
 
 @media (max-width: 800px) {
   .container_cotizacion {
-    max-width: 400px; } }
+    max-width: 600px; } }
 
 @media (max-width: 600px) {
   .container_cotizacion {
-    max-width: 200px; } }
+    max-width: 500px; } }
+
+.container_info_tienda {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 3rem; }
+
+.btn_main {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #474e4e;
+  color: white;
+  text-shadow: 0 0 15px #9d822b;
+  border: 2px solid #474e4e;
+  transition: all .3s;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  cursor: pointer; }
+
+.btn_main:hover {
+  scale: 1.1; }
+
+.btn_main:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff; }
+
+.info_tienda_title {
+  font-size: calc(var(--index) * 1.4);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 15px #9d822b; }
+
+.info_tienda_title2 {
+  font-size: calc(var(--index) * 1.65);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #aaa49d;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }
+
+.info_tienda_content {
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center; }
+  .info_tienda_content .container_info_cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px; }
+    .info_tienda_content .container_info_cards .card {
+      position: relative;
+      min-width: 320px;
+      height: 440px;
+      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      margin: 30px;
+      z-index: 105; }
+      .info_tienda_content .container_info_cards .card .box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background: #474e4e;
+        border: 2px solid #474e4e;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        transition: .5s;
+        opacity: .5;
+        cursor: pointer; }
+      .info_tienda_content .container_info_cards .card .box:hover {
+        scale: 1.05;
+        opacity: 1;
+        box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5); }
+      .info_tienda_content .container_info_cards .card .cocina_1 {
+        background-image: url(../imagenes/cocina_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .info_tienda_content .container_info_cards .card .cocina_2 {
+        background-image: url(../imagenes/cocina_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .info_tienda_content .container_info_cards .card .cocina_3 {
+        background-image: url(../imagenes/cocina_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+
+.container_info_medida {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 10%; }
+
+.info_medida_title {
+  font-size: calc(var(--index) * 1.4);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 15px #9d822b; }
+
+.info_medida_title2 {
+  font-size: calc(var(--index) * 1.65);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #aaa49d;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }
+
+.info_medida_content {
+  --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center; }
+  .info_medida_content .container_info_cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px; }
+    .info_medida_content .container_info_cards .card {
+      position: relative;
+      min-width: 320px;
+      height: 440px;
+      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      margin: 30px;
+      z-index: 105; }
+      .info_medida_content .container_info_cards .card .box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background: #474e4e;
+        border: 2px solid #474e4e;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        transition: .5s;
+        opacity: .5;
+        cursor: pointer; }
+      .info_medida_content .container_info_cards .card .box:hover {
+        scale: 1.05;
+        opacity: 1;
+        box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5); }
+      .info_medida_content .container_info_cards .card .cocina_1 {
+        background-image: url(../imagenes/cocina_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .info_medida_content .container_info_cards .card .cocina_2 {
+        background-image: url(../imagenes/cocina_2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .info_medida_content .container_info_cards .card .cocina_3 {
+        background-image: url(../imagenes/cocina_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+
+.nosotros {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center; }
+  .nosotros h1 {
+    font-size: calc(var(--index) * 1.65);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #aaa49d;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  .nosotros .container_nosotros {
+    --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap; }
+    .nosotros .container_nosotros .text_nosotros {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: start;
+      width: 120vh;
+      height: 45vh;
+      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+      border-radius: 15px; }
+      .nosotros .container_nosotros .text_nosotros i {
+        font-size: 4vh;
+        padding: 3rem;
+        color: white;
+        text-shadow: 0 0 15px #9d822b; }
+      .nosotros .container_nosotros .text_nosotros p {
+        font-size: 2vh;
+        font-weight: 600;
+        color: white;
+        text-shadow: 0 0 15px #9d822b;
+        padding-right: 3vh; }
+        .nosotros .container_nosotros .text_nosotros p span {
+          color: #aaa49d;
+          text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); }

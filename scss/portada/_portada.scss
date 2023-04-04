@@ -53,7 +53,7 @@
 .main-header::after {
 	content: '';
 	position: absolute;
-	z-index: 100;
+	z-index: 105;
 	width: 100%;
 	height: calc(var(--index) * 10);
 	background-image: url(../imagenes/ground.png);
