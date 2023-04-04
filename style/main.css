@@ -1037,11 +1037,11 @@ footer {
 
 @media (max-width: 550px) {
   .nosotros .container_nosotros .text_nosotros {
-    width: 60vh; }
+    width: 400px; }
     .nosotros .container_nosotros .text_nosotros i {
       padding: 1rem; } }
 
 @media (max-width: 400px) {
   .nosotros .container_nosotros .text_nosotros {
-    width: 40vh;
+    width: 300px;
     height: 65vh; } }
